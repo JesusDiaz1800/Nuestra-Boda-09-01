@@ -76,7 +76,7 @@
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -105,7 +105,7 @@
             background-color: var(--light);
         }
 
-        /* SVG Botánicos de Lujo y Decoraciones */
+        /* SVG Botánicos de Lujo */
         .svg-floral {
             position: absolute;
             opacity: 0.25;
@@ -114,28 +114,13 @@
             fill: var(--blue-main);
         }
         
+        /* Íconos de Vestimenta Vectoriales */
         .svg-icon {
             fill: none;
             stroke: var(--light);
             stroke-width: 1.2;
             stroke-linecap: round;
             stroke-linejoin: round;
-        }
-
-        .svg-flourish {
-            fill: none;
-            stroke: var(--blue-main);
-            stroke-width: 0.8;
-            opacity: 0.6;
-        }
-
-        /* Flores PNG Óptimas */
-        .floral-img {
-            position: absolute;
-            pointer-events: none; 
-            z-index: 5;
-            opacity: 0.95;
-            filter: drop-shadow(0 15px 25px rgba(26, 54, 93, 0.15));
         }
 
         /* Efecto Flotante Sutil */
@@ -145,6 +130,28 @@
             100% { transform: translateY(0); }
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
+
+        /* Itinerario Timeline */
+        .timeline-line {
+            position: absolute;
+            top: 28px; left: 10%; right: 10%;
+            height: 1px;
+            background-color: var(--blue-light);
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* Botón de Íconos Elegantes */
+        .icon-circle {
+            width: 56px; height: 56px;
+            background: var(--light);
+            border: 1px solid var(--blue-pale);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 5px 15px rgba(26,54,93,0.08);
+            position: relative;
+            z-index: 2;
+        }
 
         /* Carrusel CSS Táctil Modernizado */
         .carousel-container {
@@ -242,7 +249,7 @@
             <div class="w-full relative z-10 text-center pb-20 px-6 animate-fade-up">
                 <p class="font-sans tracking-[0.4em] text-[10px] text-white/80 uppercase mb-4 font-light drop-shadow-md">¡Nos casamos!</p>
                 
-                <h1 class="font-script text-[5.5rem] sm:text-[6.5rem] text-white mb-8 animate-float leading-none drop-shadow-2xl" style="filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6));">
+                <h1 class="font-script text-[6.5rem] text-white mb-8 animate-float leading-none drop-shadow-2xl" style="filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6));">
                     Isaac & Sol
                 </h1>
                 
@@ -252,8 +259,8 @@
             </div>
         </section>
 
-        <!-- 2. DISEÑO DE FECHA (Con Arte Vectorial y Flores PNG) -->
-        <section id="fecha" class="py-24 px-4 sm:px-6 text-center reveal relative bg-[var(--light)] overflow-hidden border-b border-[var(--blue-pale)]">
+        <!-- 2. DISEÑO DE FECHA (Con Arte Vectorial) -->
+        <section id="fecha" class="py-24 px-6 text-center reveal relative bg-[var(--light)] overflow-hidden border-b border-[var(--blue-pale)]">
             <!-- Vector Botánico Elegante -->
             <svg class="svg-floral w-56 absolute top-[-30px] right-[-30px]" viewBox="0 0 100 100">
                 <path d="M100 0 Q70 20 60 50 Q50 80 20 100" fill="none" stroke="var(--blue-light)" stroke-width="0.5"/>
@@ -269,97 +276,65 @@
                 <circle cx="85" cy="40" r="1.5"/>
             </svg>
             
-            <!-- Flores PNG Optimizadas -->
-            <img src="flor-1.png" alt="" class="floral-img w-56 -top-10 -left-12 opacity-90" loading="lazy">
-            <img src="flor-2.png" alt="" class="floral-img w-64 -bottom-16 -right-12 opacity-90" loading="lazy">
-            
             <div class="relative z-10">
-                <div class="flex items-center justify-center gap-4 sm:gap-6 text-[var(--blue-dark)]">
-                    <div class="text-right border-r border-[var(--blue-main)] pr-4 sm:pr-6 font-serif text-xl sm:text-2xl uppercase tracking-widest font-light">Sábado</div>
-                    <div class="text-[5rem] sm:text-[6rem] font-serif leading-none font-light drop-shadow-sm text-[var(--blue-main)]">9</div>
-                    <div class="text-left border-l border-[var(--blue-main)] pl-4 sm:pl-6 font-serif text-xl sm:text-2xl uppercase tracking-widest font-light">10:00<br><span class="text-sm">AM</span></div>
+                <div class="flex items-center justify-center gap-6 text-[var(--blue-dark)]">
+                    <div class="text-right border-r border-[var(--blue-main)] pr-6 font-serif text-2xl uppercase tracking-widest font-light">Sábado</div>
+                    <div class="text-[6rem] font-serif leading-none font-light drop-shadow-sm text-[var(--blue-main)]">9</div>
+                    <div class="text-left border-l border-[var(--blue-main)] pl-6 font-serif text-2xl uppercase tracking-widest font-light">10:00 AM</div>
                 </div>
                 <div class="mt-6">
-                    <p class="font-serif text-2xl sm:text-3xl uppercase tracking-[0.4em] text-[var(--blue-main)]">Enero</p>
-                    <p class="font-serif text-xl sm:text-2xl tracking-[0.4em] text-[var(--blue-light)] mt-2 font-light">2027</p>
+                    <p class="font-serif text-3xl uppercase tracking-[0.4em] text-[var(--blue-main)]">Enero</p>
+                    <p class="font-serif text-2xl tracking-[0.4em] text-[var(--blue-light)] mt-2 font-light">2027</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. CUENTA REGRESIVA EDITORIAL (Diseño Premium sin recuadros) -->
-        <section class="py-24 px-4 text-center reveal relative bg-[var(--blue-pale)] overflow-hidden">
-            <!-- Detalle de fondo sutil (Reloj de arena/infinito) -->
-            <i class="fas fa-hourglass-half absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[18rem] text-[var(--blue-main)] opacity-[0.02] z-0 pointer-events-none"></i>
-
-            <p class="font-sans tracking-[0.4em] text-[10px] text-[var(--blue-main)] uppercase mb-8 font-bold relative z-10">La espera termina en</p>
+        <!-- 3. CUENTA REGRESIVA EDITORIAL -->
+        <section class="py-20 px-4 text-center reveal relative bg-[var(--blue-pale)] shadow-inner">
+            <p class="font-sans tracking-[0.4em] text-[9px] text-[var(--blue-main)] uppercase mb-10 font-bold">La espera termina en</p>
             
-            <!-- Ornamento superior sutil -->
-            <div class="flex justify-center mb-8 relative z-10">
-                <svg width="80" height="20" viewBox="0 0 100 20" class="svg-flourish">
-                    <path d="M10 10 Q 50 -5 90 10" />
-                    <circle cx="50" cy="10" r="3" fill="var(--blue-light)" stroke="none"/>
-                </svg>
-            </div>
-
-            <!-- Contador fluido con líneas divisoras -->
-            <div class="flex justify-center items-center max-w-sm mx-auto relative z-10 w-full" id="countdown">
-                <!-- Días -->
-                <div class="flex flex-col items-center justify-center flex-1">
-                    <span id="days" class="font-serif text-4xl sm:text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
+            <div class="flex justify-center items-center gap-5" id="countdown">
+                <div class="flex flex-col items-center">
+                    <span id="days" class="font-serif text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
                     <span class="font-sans text-[8px] uppercase tracking-widest text-[var(--blue-light)] mt-2 font-bold">Días</span>
                 </div>
-                
-                <div class="w-[1px] h-12 bg-gradient-to-b from-transparent via-[var(--blue-light)] to-transparent opacity-50"></div>
-                
-                <!-- Horas -->
-                <div class="flex flex-col items-center justify-center flex-1">
-                    <span id="hours" class="font-serif text-4xl sm:text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
+                <div class="text-[var(--blue-light)] text-3xl font-light mb-4 opacity-40">:</div>
+                <div class="flex flex-col items-center">
+                    <span id="hours" class="font-serif text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
                     <span class="font-sans text-[8px] uppercase tracking-widest text-[var(--blue-light)] mt-2 font-bold">Hrs</span>
                 </div>
-                
-                <div class="w-[1px] h-12 bg-gradient-to-b from-transparent via-[var(--blue-light)] to-transparent opacity-50"></div>
-                
-                <!-- Minutos -->
-                <div class="flex flex-col items-center justify-center flex-1">
-                    <span id="minutes" class="font-serif text-4xl sm:text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
+                <div class="text-[var(--blue-light)] text-3xl font-light mb-4 opacity-40">:</div>
+                <div class="flex flex-col items-center">
+                    <span id="minutes" class="font-serif text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
                     <span class="font-sans text-[8px] uppercase tracking-widest text-[var(--blue-light)] mt-2 font-bold">Min</span>
-                </div>
-
-                <div class="w-[1px] h-12 bg-gradient-to-b from-transparent via-[var(--blue-light)] to-transparent opacity-50"></div>
-                
-                <!-- Segundos -->
-                <div class="flex flex-col items-center justify-center flex-1">
-                    <span id="seconds" class="font-serif text-4xl sm:text-5xl text-[var(--blue-dark)] font-light drop-shadow-sm">00</span>
-                    <span class="font-sans text-[8px] uppercase tracking-widest text-[var(--blue-light)] mt-2 font-bold">Seg</span>
                 </div>
             </div>
         </section>
 
         <!-- 4. TEXTO DE BENDICIÓN (Enmarcado Vectorial) -->
-        <section class="py-28 px-8 text-center reveal relative bg-[var(--light)] overflow-hidden">
+        <section class="py-28 px-10 text-center reveal relative bg-[var(--light)] overflow-hidden">
+            <!-- Vector Botánico Background -->
             <svg class="svg-floral w-full h-full absolute inset-0 opacity-[0.05]" preserveAspectRatio="none" viewBox="0 0 100 100">
                 <path d="M0 100 Q50 50 100 0" fill="none" stroke="var(--blue-main)" stroke-width="0.5"/>
                 <path d="M0 0 Q50 50 100 100" fill="none" stroke="var(--blue-main)" stroke-width="0.5"/>
             </svg>
             
-            <img src="flor-1.png" alt="" class="floral-img w-40 -top-8 -right-8 opacity-40" loading="lazy">
-
-            <div class="relative z-10 glass-panel p-8 sm:p-10 rounded-[2.5rem] border border-[var(--blue-light)]/30">
-                <p class="font-serif text-[1.3rem] sm:text-[1.4rem] text-[var(--blue-dark)] leading-relaxed font-light italic mb-8">
+            <div class="relative z-10 glass-panel p-10 rounded-[2.5rem] border border-[var(--blue-light)]/30">
+                <p class="font-serif text-[1.4rem] text-[var(--blue-dark)] leading-relaxed font-light italic mb-8">
                     "Desde el principio, Dios reservó este amor para nosotros, guiándonos hasta este momento. Hoy, con su bendición, decidimos unir nuestras vidas y sellar este amor eterno."
                 </p>
                 <div class="w-12 h-px bg-[var(--blue-light)] mx-auto mb-8"></div>
-                <p class="font-sans text-[10px] sm:text-[11px] text-[var(--blue-main)] font-semibold tracking-widest uppercase mb-4">
+                <p class="font-sans text-[11px] text-[var(--blue-main)] font-semibold tracking-widest uppercase mb-4">
                     ¡Estás invitado!
                 </p>
-                <p class="font-sans text-[10px] sm:text-[11px] text-[var(--blue-light)] font-light leading-relaxed tracking-wide px-2">
+                <p class="font-sans text-[11px] text-[var(--blue-light)] font-light leading-relaxed tracking-wide px-2">
                     Nos encantaría que seas parte de este momento tan especial para nosotros.
                 </p>
             </div>
         </section>
 
         <!-- 5. GALERÍA DE FOTOS PREMIUM -->
-        <section class="py-20 px-4 sm:px-6 relative z-10 reveal bg-[var(--blue-pale)] border-y border-white">
+        <section class="py-20 px-6 relative z-10 reveal bg-[var(--blue-pale)] border-y border-white">
             <div class="text-center mb-12">
                 <div class="flex items-center justify-center gap-3 mb-2">
                     <div class="w-8 h-px bg-[var(--blue-light)] opacity-50"></div>
@@ -367,10 +342,11 @@
                     <div class="w-8 h-px bg-[var(--blue-light)] opacity-50"></div>
                 </div>
 
-                <h2 class="font-script text-[4.5rem] sm:text-[5rem] text-[var(--blue-main)] mb-0 opacity-90 drop-shadow-sm leading-none">Nuestros</h2>
-                <h3 class="font-serif text-xl sm:text-2xl text-[var(--blue-dark)] tracking-[0.4em] uppercase mt-[-5px] relative z-10">Momentos</h3>
+                <h2 class="font-script text-[5rem] text-[var(--blue-main)] mb-0 opacity-90 drop-shadow-sm leading-none">Nuestros</h2>
+                <h3 class="font-serif text-2xl text-[var(--blue-dark)] tracking-[0.4em] uppercase mt-[-10px] relative z-10">Momentos</h3>
             </div>
             
+            <!-- Carrusel con Bordes Elegantes -->
             <div class="carousel-container bg-white" id="carousel">
                 <div class="carousel-track" id="carousel-track">
                     <div class="carousel-slide"><img src="1.png" alt="Foto 1" class="carousel-img"></div>
@@ -380,10 +356,12 @@
                     <div class="carousel-slide"><img src="2.png" alt="Foto 5" class="carousel-img"></div>
                 </div>
                 
+                <!-- Botones de Navegación Flotantes -->
                 <button class="absolute top-1/2 left-4 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[var(--blue-dark)] hover:bg-white transition-colors" id="prevBtn"><i class="fas fa-chevron-left text-[10px]"></i></button>
                 <button class="absolute top-1/2 right-4 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[var(--blue-dark)] hover:bg-white transition-colors" id="nextBtn"><i class="fas fa-chevron-right text-[10px]"></i></button>
             </div>
             
+            <!-- Dots Minimalistas -->
             <div class="flex justify-center gap-3 mt-8" id="carousel-dots">
                 <div class="w-2 h-2 rounded-full bg-[var(--blue-main)] transition-all duration-300 dot shadow-md scale-125"></div>
                 <div class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 dot shadow-sm"></div>
@@ -393,22 +371,12 @@
             </div>
         </section>
 
-        <!-- 6. ITINERARIO (TIMELINE VERTICAL Y DECORADO) -->
-        <section class="py-24 px-6 reveal relative bg-[var(--light)] overflow-hidden">
-            <!-- Anillos de fondo sutiles -->
-            <i class="fas fa-infinity absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[20rem] text-[var(--blue-main)] opacity-[0.02] z-0 pointer-events-none"></i>
-
-            <div class="text-center mb-16 relative z-10">
+        <!-- 6. ITINERARIO (TIMELINE VERTICAL PREMIUM) -->
+        <section class="py-28 px-6 reveal relative bg-[var(--light)]">
+            <div class="text-center mb-20">
                 <p class="font-sans text-[10px] tracking-[0.5em] text-[var(--blue-light)] uppercase mb-3 font-bold">El Gran Día</p>
-                <h2 class="font-serif text-[2.5rem] text-[var(--blue-main)] tracking-widest uppercase mb-4">Itinerario</h2>
-                
-                <!-- Ornamento debajo del título -->
-                <div class="flex justify-center">
-                    <svg width="60" height="15" viewBox="0 0 100 20" class="svg-flourish">
-                        <path d="M0 10 Q 25 0 50 10 T 100 10" />
-                        <path d="M45 5 L 55 15 M 55 5 L 45 15" stroke="var(--blue-light)" />
-                    </svg>
-                </div>
+                <h2 class="font-serif text-[2.5rem] text-[var(--blue-main)] tracking-widest uppercase mb-6">Itinerario</h2>
+                <div class="divider-h"></div>
             </div>
 
             <div class="relative max-w-sm mx-auto mt-10">
@@ -451,7 +419,7 @@
                         </div>
                         <div class="w-1/2 pl-8"></div>
                     </div>
-
+                </div>
             </div>
         </section>
 
@@ -459,16 +427,13 @@
         <!-- 7. UBICACIÓN -->
         <section class="py-24 px-6 reveal relative bg-[var(--blue-pale)] overflow-hidden">
             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cartographer.png')] opacity-10"></div>
-            
-            <img src="flor-2.png" alt="" class="floral-img w-48 -bottom-10 -left-10 opacity-60" loading="lazy">
-
-            <div class="relative z-10 glass-panel p-8 sm:p-10 rounded-[2.5rem] text-center max-w-sm mx-auto shadow-[0_10px_30px_rgba(26,54,93,0.05)]">
+            <div class="relative z-10 glass-panel p-10 rounded-[2.5rem] text-center max-w-sm mx-auto">
                 <div class="w-16 h-16 mx-auto rounded-full bg-white flex items-center justify-center mb-6 text-[var(--blue-main)] shadow-sm">
                     <i class="fas fa-map-marked-alt text-2xl"></i>
                 </div>
                 <h3 class="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--blue-light)] mb-3 font-semibold">Ubicación</h3>
-                <p class="font-serif text-2xl sm:text-3xl text-[var(--blue-dark)] font-medium mb-2">Salón de Eventos GyP</p>
-                <p class="font-sans text-[10px] sm:text-[11px] text-gray-500 tracking-wide mb-8">5613, Malargüe, Mendoza</p>
+                <p class="font-serif text-3xl text-[var(--blue-dark)] font-medium mb-2">Salón de Eventos GyP</p>
+                <p class="font-sans text-[11px] text-gray-500 tracking-wide mb-8">5613, Malargüe, Mendoza</p>
                 
                 <a href="https://maps.google.com/?q=Salon+de+eventos+GyP" target="_blank" class="inline-block bg-[var(--blue-main)] text-white px-8 py-4 rounded-full font-sans text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
                     Ver en el Mapa
@@ -476,18 +441,16 @@
             </div>
         </section>
 
-        <!-- 8. CÓDIGO DE VESTIMENTA (FONDO AZUL PREMIUM OPTIMIZADO) -->
-        <section class="py-24 px-6 sm:px-8 reveal text-center text-white relative overflow-hidden">
+        <!-- 8. CÓDIGO DE VESTIMENTA (FONDO AZUL PREMIUM) -->
+        <section class="py-32 px-1 reveal text-center text-white relative overflow-hidden">
             <!-- Fondo Degradado Azul Profundo -->
             <div class="absolute inset-0 bg-gradient-to-br from-[var(--blue-night)] via-[var(--blue-main)] to-[var(--blue-night)] z-0"></div>
-            
-            <div class="relative z-10">
-                <p class="font-sans text-[10px] tracking-[0.5em] text-[var(--blue-light)] mb-4 uppercase font-bold">Dress Code</p>
-                <h3 class="font-serif text-[2.5rem] sm:text-[3rem] text-white mb-6 font-light italic">Formal & Cómodo</h3>
-                
-                <!-- Arte Vectorial Optimizado -->
-                <div class="flex justify-center mb-6 opacity-90">
-                    <svg width="80" height="80" viewBox="0 0 100 100" class="svg-icon">
+      <div class="relative z-10">
+                <p class="font-sans text-[10px] tracking-[0.5em] text-[var(--blue-light)] mb-6 uppercase font-bold">Dress Code</p>
+                <h3 class="font-serif text-[3.2rem] text-white mb-50 font-light italic">Formal & Cómodo</h3>
+                <!-- Arte Vectorial Optimizado (Blanco/Celeste) -->
+                <div class="flex justify-center mb-100 opacity-90">
+                    <svg width="120" height="120" viewBox="0 0 100 100" class="svg-icon">
                         <path d="M30 20 C35 25 35 40 20 85 C35 85 45 85 50 85 C45 60 40 40 40 20 C35 30 35 30 30 20 Z" fill="rgba(255,255,255,0.05)"/>
                         <path d="M25 25 L20 35 M45 25 L50 35" stroke="var(--blue-light)"/>
                         <path d="M60 20 L80 20 L85 45 L80 85 L70 85 L70 50 L60 85 L55 85 L55 45 Z" fill="rgba(255,255,255,0.05)"/>
@@ -495,23 +458,22 @@
                     </svg>
                 </div>
                 
-                <!-- Espaciados reducidos para mayor conexión visual -->
-                <div class="font-sans text-[11px] sm:text-[12px] text-[var(--blue-pale)] space-y-4 font-light tracking-wide px-2 text-center leading-relaxed max-w-[300px] mx-auto">
-                    <p class="flex items-start gap-4 text-left">
-                        <i class="fas fa-leaf text-[var(--blue-light)] text-base mt-1 w-5 text-center shrink-0"></i>
-                        <span class="flex-1">Parte del evento será al aire libre, elegí un look con el que te sientas a gusto.</span>
+                <div class="font-sans text-[13px] text-[var(--blue-pale)] space-y-8 font-light tracking-wide px-2 text-center leading-relaxed max-w-sm mx-auto">
+                    <p class="flex items-start gap-5">
+                        <i class="fas fa-leaf text-[var(--blue-light)] text-xl mt-1"></i>
+                        <span class="text-left flex-1">Parte del evento será al aire libre, elegí un look con el que te sientas a gusto.</span>
                     </p>
-                    <p class="flex items-start gap-4 text-left">
-                        <i class="fas fa-swimmer text-[var(--blue-light)] text-base mt-1 w-5 text-center shrink-0"></i>
-                        <span class="flex-1">El lugar cuenta con pileta, ¡no olvides tu traje de baño!</span>
+                    <p class="flex items-start gap-5">
+                        <i class="fas fa-swimmer text-[var(--blue-light)] text-xl mt-1"></i>
+                        <span class="text-left flex-1">El lugar cuenta con pileta, ¡no olvides tu traje de baño!</span>
                     </p>
                     
-                    <!-- Box Especial más compacto -->
-                    <div class="bg-white/10 backdrop-blur-xl p-5 rounded-2xl border border-white/20 shadow-2xl mt-6 relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--blue-night)] rounded-full p-2 border border-white/20 shadow-lg">
-                            <i class="fas fa-crown text-white text-[10px]"></i>
+                    <!-- Box Especial Glassmorphism -->
+                    <div class="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl mt-12 relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[var(--blue-night)] rounded-full p-3 border border-white/20 shadow-lg">
+                            <i class="fas fa-crown text-white text-sm"></i>
                         </div>
-                        <p class="font-medium text-center mt-2 text-[10px] uppercase tracking-[0.15em] text-[var(--blue-pale)] leading-relaxed">
+                        <p class="font-medium text-center mt-4 text-[11px] uppercase tracking-[0.15em] text-[var(--blue-pale)] leading-relaxed">
                             Pequeño pedido especial:<br> reservamos el <strong class="text-white font-bold tracking-widest">blanco</strong> para la novia.
                         </p>
                     </div>
@@ -519,40 +481,30 @@
             </div>
         </section>
 
-        <!-- 9. REGALOS (Estilo Acuarela y Decorado) -->
-        <section class="py-24 px-8 text-center reveal relative bg-watercolor shadow-inner border-b border-white overflow-hidden">
-            <!-- Icono de regalo gigante de fondo -->
-            <i class="fas fa-envelope-open-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[16rem] text-[var(--blue-main)] opacity-[0.02] z-0 pointer-events-none"></i>
-
-            <img src="flor-1.png" alt="" class="floral-img w-56 -top-12 -right-12 opacity-60 transform rotate-90" loading="lazy">
-
-            <!-- Ornamento de lazo elegante -->
-            <div class="flex justify-center mb-4 relative z-10">
-                <i class="fas fa-gift text-2xl text-[var(--blue-light)] opacity-70"></i>
-            </div>
-
-            <h2 class="font-script text-[5rem] sm:text-[6rem] text-[var(--blue-main)] mb-6 opacity-90 drop-shadow-sm leading-none relative z-10">Regalo</h2>
+        <!-- 9. REGALOS (Estilo Acuarela) -->
+        <section class="py-28 px-8 text-center reveal relative bg-watercolor shadow-inner border-b border-white">
+            <h2 class="font-script text-[6rem] text-[var(--blue-main)] mb-6 opacity-90 drop-shadow-sm leading-none">Regalo</h2>
             
-            <p class="font-serif text-[1.3rem] sm:text-[1.5rem] text-[var(--blue-dark)] mb-2 font-light italic relative z-10">
+            <p class="font-serif text-[1.5rem] text-[var(--blue-dark)] mb-2 font-light italic">
                 No te preocupes, que todo corre
             </p>
-            <p class="font-serif text-[1.3rem] sm:text-[1.5rem] text-[var(--blue-dark)] mb-10 font-light italic relative z-10">
+            <p class="font-serif text-[1.5rem] text-[var(--blue-dark)] mb-12 font-light italic">
                 por nuestra cuenta.
             </p>
             
-            <p class="font-sans text-[9px] text-[var(--blue-light)] tracking-[0.3em] uppercase mb-4 font-bold relative z-10">
+            <p class="font-sans text-[9px] text-[var(--blue-light)] tracking-[0.3em] uppercase mb-4 font-bold">
                 Nuestra cuenta:
             </p>
 
-            <div class="glass-panel inline-block px-8 py-5 sm:px-10 sm:py-6 rounded-[2rem] mb-8 border border-white/60 w-full max-w-[320px] relative z-10">
-                <p id="cbu-text" class="font-serif text-lg sm:text-xl text-[var(--blue-dark)] tracking-[0.1em] font-semibold break-all">
+            <div class="glass-panel inline-block px-10 py-6 rounded-[2rem] mb-10 border border-white/60">
+                <p id="cbu-text" class="font-serif text-xl text-[var(--blue-dark)] tracking-[0.1em] font-semibold">
                     ES11 1111 1111 1111 1111 1111
                 </p>
             </div>
 
-            <button onclick="copyCBU()" class="flex flex-col items-center justify-center text-[var(--blue-light)] hover:text-[var(--blue-main)] transition-all mx-auto group relative z-10">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform">
-                    <i class="far fa-copy text-xl sm:text-2xl text-[var(--blue-main)]"></i>
+            <button onclick="copyCBU()" class="flex flex-col items-center justify-center text-[var(--blue-light)] hover:text-[var(--blue-main)] transition-all mx-auto group">
+                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform">
+                    <i class="far fa-copy text-2xl text-[var(--blue-main)]"></i>
                 </div>
                 <span class="font-sans text-[9px] uppercase tracking-[0.2em] font-bold text-[var(--blue-main)]">(clic)</span>
             </button>
@@ -565,20 +517,20 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#08101A] via-[#1A365D]/70 to-transparent z-10"></div>
             
             <div class="relative z-20 px-6 pb-14 pt-32 w-full flex flex-col items-center justify-end h-full">
-                <h2 class="font-script text-[5.5rem] sm:text-[6.5rem] text-white mb-4 drop-shadow-2xl leading-none" style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));">Te esperamos</h2>
+                <h2 class="font-script text-[6.5rem] text-white mb-4 drop-shadow-2xl leading-none" style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));">Te esperamos</h2>
                 
                 <div class="divider-h bg-white mb-10 opacity-50 w-20"></div>
 
-                <p class="font-sans font-light text-[9px] sm:text-[10px] text-white/90 mb-10 tracking-[0.3em] uppercase leading-relaxed text-shadow-md">
-                    Confirmá tu asistencia<br>antes del <span class="font-bold text-[11px] sm:text-[12px] block mt-2 text-white">10 de Diciembre</span>
+                <p class="font-sans font-light text-[10px] text-white/90 mb-12 tracking-[0.3em] uppercase leading-relaxed text-shadow-md">
+                    Confirmá tu asistencia<br>antes del <span class="font-bold text-[12px] block mt-2 text-white">10 de Diciembre</span>
                 </p>
                 
                 <!-- Botón que abre el Modal Premium -->
-                <button onclick="openRSVPModal()" class="bg-white text-[var(--blue-main)] px-8 py-4 sm:px-10 sm:py-5 rounded-full font-sans font-bold text-[10px] uppercase tracking-[0.2em] transition-all hover:scale-105 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-3 w-[90%] max-w-[300px]">
-                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i> Confirmar Asistencia
+                <button onclick="openRSVPModal()" class="bg-white text-[var(--blue-main)] px-10 py-5 rounded-full font-sans font-bold text-[10px] uppercase tracking-[0.2em] transition-all hover:scale-105 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-3 w-[90%]">
+                    <i class="fab fa-whatsapp text-xl"></i> Confirmar Asistencia
                 </button>
 
-                <div class="mt-20 w-full border-t border-white/20 pt-6">
+                <div class="mt-24 w-full border-t border-white/20 pt-6">
                     <p class="font-sans text-[8px] tracking-[0.6em] uppercase text-white/50">
                         © 2027 • I & S
                     </p>
@@ -590,39 +542,39 @@
         <div id="rsvpModal" class="modal-overlay">
             <div class="modal-content">
                 <div class="flex justify-between items-center mb-8">
-                    <h3 class="font-script text-[3rem] sm:text-[3.5rem] text-[var(--blue-main)] leading-none">Confirmación</h3>
+                    <h3 class="font-script text-[3.5rem] text-[var(--blue-main)] leading-none">Confirmación</h3>
                     <button onclick="closeRSVPModal()" class="w-8 h-8 rounded-full bg-[var(--blue-pale)] text-[var(--blue-main)] hover:bg-[var(--blue-dark)] hover:text-white transition-colors flex items-center justify-center"><i class="fas fa-times"></i></button>
                 </div>
                 
-                <p class="font-sans text-[10px] sm:text-[11px] text-gray-500 mb-8 text-center font-light tracking-wide">Por favor, seleccioná una opción para avisarnos:</p>
+                <p class="font-sans text-[11px] text-gray-500 mb-8 text-center font-light tracking-wide">Por favor, seleccioná una opción para avisarnos:</p>
 
-                <div class="space-y-3">
-                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                <div class="space-y-4">
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-5 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="1 persona" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
-                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiré (1 Persona)</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[10px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiré (1 Persona)</span>
                         </div>
                     </label>
                     
-                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-5 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="2 personas" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
-                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (2 Personas)</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[10px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (2 Personas)</span>
                         </div>
                     </label>
 
-                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-5 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="Lo siento, no podremos asistir" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
-                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Lo siento, no podré asistir</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[10px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Lo siento, no podré asistir</span>
                         </div>
                     </label>
                 </div>
 
-                <button onclick="sendRSVP()" class="w-full mt-8 bg-[var(--blue-main)] text-white py-4 rounded-full font-sans text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
+                <button onclick="sendRSVP()" class="w-full mt-10 bg-[var(--blue-main)] text-white py-4.5 rounded-full font-sans text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
                     Enviar WhatsApp
                 </button>
             </div>
@@ -773,7 +725,7 @@
             }, 4500);
         }
 
-        // 4. Cuenta Regresiva Optimizada
+        // 4. Cuenta Regresiva
         const weddingDate = new Date("Jan 9, 2027 10:00:00").getTime();
         const countdownTimer = setInterval(() => {
             const now = new Date().getTime();
@@ -781,14 +733,13 @@
 
             if (distance < 0) {
                 clearInterval(countdownTimer);
-                document.getElementById("countdown").innerHTML = "<div class='font-script text-4xl sm:text-5xl text-[var(--blue-main)] py-4 drop-shadow-md col-span-4 w-full text-center'>¡Hoy es el gran día!</div>";
+                document.getElementById("countdown").innerHTML = "<div class='font-script text-5xl text-[var(--blue-main)] py-4 drop-shadow-md'>¡Hoy es el gran día!</div>";
                 return;
             }
 
             document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
             document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
             document.getElementById("minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
         }, 1000);
 
         // 5. Audio Inteligente
