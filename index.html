@@ -371,19 +371,22 @@
                 <h3 class="font-serif text-xl sm:text-2xl text-[var(--blue-dark)] tracking-[0.4em] uppercase mt-[-5px] relative z-10">Momentos</h3>
             </div>
             
+            <!-- Carrusel con Bordes Elegantes -->
             <div class="carousel-container bg-white" id="carousel">
                 <div class="carousel-track" id="carousel-track">
-                    <div class="carousel-slide"><img src="1.png" alt="Foto 1" class="carousel-img"></div>
-                    <div class="carousel-slide"><img src="3.png" alt="Foto 2" class="carousel-img"></div>
-                    <div class="carousel-slide"><img src="5.png" alt="Foto 3" class="carousel-img"></div>
-                    <div class="carousel-slide"><img src="4.png" alt="Foto 4" class="carousel-img"></div>
-                    <div class="carousel-slide"><img src="2.png" alt="Foto 5" class="carousel-img"></div>
+                    <div class="carousel-slide"><img src="1.png" alt="Foto 1" class="carousel-img" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="3.png" alt="Foto 2" class="carousel-img" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="6.png" alt="Foto 3" class="carousel-img" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="4.png" alt="Foto 4" class="carousel-img" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="7.png" alt="Foto 5" class="carousel-img" loading="lazy"></div>
                 </div>
                 
+                <!-- Botones de Navegación Flotantes -->
                 <button class="absolute top-1/2 left-4 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[var(--blue-dark)] hover:bg-white transition-colors" id="prevBtn"><i class="fas fa-chevron-left text-[10px]"></i></button>
                 <button class="absolute top-1/2 right-4 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[var(--blue-dark)] hover:bg-white transition-colors" id="nextBtn"><i class="fas fa-chevron-right text-[10px]"></i></button>
             </div>
             
+            <!-- Dots Minimalistas -->
             <div class="flex justify-center gap-3 mt-8" id="carousel-dots">
                 <div class="w-2 h-2 rounded-full bg-[var(--blue-main)] transition-all duration-300 dot shadow-md scale-125"></div>
                 <div class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 dot shadow-sm"></div>
@@ -393,65 +396,86 @@
             </div>
         </section>
 
-        <!-- 6. ITINERARIO (TIMELINE VERTICAL Y DECORADO) -->
-        <section class="py-24 px-6 reveal relative bg-[var(--light)] overflow-hidden">
-            <!-- Anillos de fondo sutiles -->
-            <i class="fas fa-infinity absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[20rem] text-[var(--blue-main)] opacity-[0.02] z-0 pointer-events-none"></i>
-
-            <div class="text-center mb-16 relative z-10">
+        <!-- 6. ITINERARIO (TIMELINE VERTICAL MEJORADO) -->
+        <section class="py-24 px-6 reveal relative bg-[var(--light)]">
+            <div class="text-center mb-16">
                 <p class="font-sans text-[10px] tracking-[0.5em] text-[var(--blue-light)] uppercase mb-3 font-bold">El Gran Día</p>
-                <h2 class="font-serif text-[2.5rem] text-[var(--blue-main)] tracking-widest uppercase mb-4">Itinerario</h2>
-                
-                <!-- Ornamento debajo del título -->
-                <div class="flex justify-center">
-                    <svg width="60" height="15" viewBox="0 0 100 20" class="svg-flourish">
-                        <path d="M0 10 Q 25 0 50 10 T 100 10" />
-                        <path d="M45 5 L 55 15 M 55 5 L 45 15" stroke="var(--blue-light)" />
-                    </svg>
-                </div>
+                <h2 class="font-serif text-[2.5rem] text-[var(--blue-main)] tracking-widest uppercase mb-6">Itinerario</h2>
+                <div class="divider-h"></div>
             </div>
 
-            <div class="relative max-w-sm mx-auto mt-10">
-                <!-- Línea central elegante -->
-                <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[var(--blue-light)] to-transparent transform -translate-x-1/2 z-0 opacity-40"></div>
+            <!-- Diseño de línea de tiempo alineado a la izquierda para mejor visibilidad móvil -->
+            <div class="relative max-w-xs sm:max-w-sm mx-auto mt-10">
+                <!-- Línea guía a la izquierda -->
+                <div class="absolute left-[28px] top-4 bottom-4 w-[1px] bg-gradient-to-b from-transparent via-[var(--blue-light)] to-transparent z-0 opacity-50"></div>
                 
-                <div class="space-y-20 relative z-10">
+                <div class="space-y-10 relative z-10">
                     <!-- Item 1 -->
                     <div class="flex items-center w-full">
-                        <div class="w-1/2 pr-8 text-right">
-                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">10:00 A.M.</p>
-                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-2">Ceremonia</p>
+                        <div class="w-14 h-14 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-md relative z-10 shrink-0">
+                            <i class="fas fa-ring text-[var(--blue-main)] text-lg"></i>
                         </div>
-                        <div class="w-14 h-14 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-[0_10px_25px_rgba(26,54,93,0.1)] transition-transform hover:scale-110">
-                            <i class="fas fa-ring text-[var(--blue-main)] text-xl"></i>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">10:00 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1">Ceremonia</p>
                         </div>
-                        <div class="w-1/2 pl-8"></div>
                     </div>
                     
                     <!-- Item 2 -->
                     <div class="flex items-center w-full">
-                        <div class="w-1/2 pr-8"></div>
-                        <div class="w-14 h-14 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-[var(--blue-main)] border-[3px] border-white flex items-center justify-center shadow-[0_10px_25px_rgba(26,54,93,0.2)] transition-transform hover:scale-110">
+                        <div class="w-14 h-14 rounded-full bg-[var(--blue-main)] border-[3px] border-white flex items-center justify-center shadow-lg relative z-10 shrink-0">
                             <i class="fas fa-glass-cheers text-white text-lg"></i>
                         </div>
-                        <div class="w-1/2 pl-8 text-left">
-                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">1:30 P.M.</p>
-                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-2">Recepción</p>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">12:30 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1">Recepción</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-center w-full">
+                        <div class="w-14 h-14 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-md relative z-10 shrink-0">
+                            <i class="fas fa-sun text-[var(--blue-main)] text-lg"></i>
+                        </div>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">15:30 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1 leading-relaxed">Tarde al aire libre<br>con pileta</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex items-center w-full">
+                        <div class="w-14 h-14 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-md relative z-10 shrink-0">
+                            <i class="fas fa-coffee text-[var(--blue-main)] text-lg"></i>
+                        </div>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">17:00 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1">Pausa dulce</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="flex items-center w-full">
+                        <div class="w-14 h-14 rounded-full bg-[var(--blue-main)] border-[3px] border-white flex items-center justify-center shadow-lg relative z-10 shrink-0">
+                            <i class="fas fa-music text-white text-lg"></i>
+                        </div>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">21:30 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1">Fiesta y baile</p>
                         </div>
                     </div>
                     
-                    <!-- Item 3 -->
+                    <!-- Item 6 -->
                     <div class="flex items-center w-full">
-                        <div class="w-1/2 pr-8 text-right">
-                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">7:00 P.M.</p>
-                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-2 leading-relaxed">Felices por<br>siempre</p>
+                        <div class="w-14 h-14 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-md relative z-10 shrink-0">
+                            <i class="fas fa-heart text-[var(--blue-main)] text-lg"></i>
                         </div>
-                        <div class="w-14 h-14 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-white border border-[var(--blue-pale)] flex items-center justify-center shadow-[0_10px_25px_rgba(26,54,93,0.1)] transition-transform hover:scale-110">
-                            <i class="fas fa-heart text-[var(--blue-main)] text-xl"></i>
+                        <div class="pl-6 text-left">
+                            <p class="font-serif text-2xl font-bold text-[var(--blue-dark)]">05:30 HS</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-[var(--blue-light)] mt-1">Felices por siempre</p>
                         </div>
-                        <div class="w-1/2 pl-8"></div>
                     </div>
-
+                </div>
             </div>
         </section>
 
@@ -459,18 +483,14 @@
         <!-- 7. UBICACIÓN -->
         <section class="py-24 px-6 reveal relative bg-[var(--blue-pale)] overflow-hidden">
             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cartographer.png')] opacity-10"></div>
-            
-            <img src="flor-2.png" alt="" class="floral-img w-48 -bottom-10 -left-10 opacity-60" loading="lazy">
-
-            <div class="relative z-10 glass-panel p-8 sm:p-10 rounded-[2.5rem] text-center max-w-sm mx-auto shadow-[0_10px_30px_rgba(26,54,93,0.05)]">
+            <div class="relative z-10 glass-panel p-8 sm:p-10 rounded-[2.5rem] text-center max-w-sm mx-auto">
                 <div class="w-16 h-16 mx-auto rounded-full bg-white flex items-center justify-center mb-6 text-[var(--blue-main)] shadow-sm">
                     <i class="fas fa-map-marked-alt text-2xl"></i>
                 </div>
                 <h3 class="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--blue-light)] mb-3 font-semibold">Ubicación</h3>
-                <p class="font-serif text-2xl sm:text-3xl text-[var(--blue-dark)] font-medium mb-2">Salón de Eventos GyP</p>
-                <p class="font-sans text-[10px] sm:text-[11px] text-gray-500 tracking-wide mb-8">5613, Malargüe, Mendoza</p>
+                <p class="font-serif text-2xl sm:text-3xl text-[var(--blue-dark)] font-medium mb-8">Finca Arcángeles</p>
                 
-                <a href="https://maps.google.com/?q=Salon+de+eventos+GyP" target="_blank" class="inline-block bg-[var(--blue-main)] text-white px-8 py-4 rounded-full font-sans text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
+                <a href="https://maps.app.goo.gl/tpZXtS7Ra9siYPk1A?g_st=aw" target="_blank" class="inline-block bg-[var(--blue-main)] text-white px-8 py-4 rounded-full font-sans text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
                     Ver en el Mapa
                 </a>
             </div>
@@ -533,20 +553,19 @@
 
             <h2 class="font-script text-[5rem] sm:text-[6rem] text-[var(--blue-main)] mb-6 opacity-90 drop-shadow-sm leading-none relative z-10">Regalo</h2>
             
-            <p class="font-serif text-[1.3rem] sm:text-[1.5rem] text-[var(--blue-dark)] mb-2 font-light italic relative z-10">
-                No te preocupes, que todo corre
-            </p>
-            <p class="font-serif text-[1.3rem] sm:text-[1.5rem] text-[var(--blue-dark)] mb-10 font-light italic relative z-10">
-                por nuestra cuenta.
+            <p class="font-serif text-[1.1rem] sm:text-[1.2rem] text-[var(--blue-dark)] mb-8 font-light italic relative z-10 leading-relaxed px-1">
+                Lo más importante para nosotros es compartir este momento con vos.<br><br>
+                Si aun así querés hacernos un regalo, podés colaborar con nuestro futuro juntos mediante un aporte.<br><br>
+                Y si preferís elegir algo especial, será más que bienvenido.
             </p>
             
             <p class="font-sans text-[9px] text-[var(--blue-light)] tracking-[0.3em] uppercase mb-4 font-bold relative z-10">
                 Nuestra cuenta:
             </p>
 
-            <div class="glass-panel inline-block px-8 py-5 sm:px-10 sm:py-6 rounded-[2rem] mb-8 border border-white/60 w-full max-w-[320px] relative z-10">
-                <p id="cbu-text" class="font-serif text-lg sm:text-xl text-[var(--blue-dark)] tracking-[0.1em] font-semibold break-all">
-                    ES11 1111 1111 1111 1111 1111
+            <div class="glass-panel inline-block px-4 py-5 sm:px-8 sm:py-6 rounded-[2rem] mb-8 border border-white/60 w-full max-w-[320px] relative z-10">
+                <p id="cbu-text" class="font-serif text-[15px] sm:text-[18px] text-[var(--blue-dark)] tracking-[0.1em] font-semibold break-all">
+                    0110348730034816011401
                 </p>
             </div>
 
@@ -589,18 +608,19 @@
         <!-- MODAL DE CONFIRMACIÓN VIP -->
         <div id="rsvpModal" class="modal-overlay">
             <div class="modal-content">
-                <div class="flex justify-between items-center mb-8">
+                <div class="flex justify-between items-center mb-6">
                     <h3 class="font-script text-[3rem] sm:text-[3.5rem] text-[var(--blue-main)] leading-none">Confirmación</h3>
                     <button onclick="closeRSVPModal()" class="w-8 h-8 rounded-full bg-[var(--blue-pale)] text-[var(--blue-main)] hover:bg-[var(--blue-dark)] hover:text-white transition-colors flex items-center justify-center"><i class="fas fa-times"></i></button>
                 </div>
                 
-                <p class="font-sans text-[10px] sm:text-[11px] text-gray-500 mb-8 text-center font-light tracking-wide">Por favor, seleccioná una opción para avisarnos:</p>
+                <p class="font-sans text-[10px] sm:text-[11px] text-gray-500 mb-6 text-center font-light tracking-wide">Por favor, seleccioná una opción para avisarnos:</p>
 
-                <div class="space-y-3">
+                <!-- Scroll interno agregado por si la pantalla es muy pequeña -->
+                <div class="space-y-3 max-h-[50vh] overflow-y-auto px-1 pb-2">
                     <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="1 persona" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
                             <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiré (1 Persona)</span>
                         </div>
                     </label>
@@ -608,21 +628,45 @@
                     <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="2 personas" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
                             <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (2 Personas)</span>
+                        </div>
+                    </label>
+
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                        <input type="radio" name="rsvpOption" value="3 personas" class="absolute opacity-0">
+                        <div class="flex items-center gap-4">
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (3 Personas)</span>
+                        </div>
+                    </label>
+
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                        <input type="radio" name="rsvpOption" value="4 personas" class="absolute opacity-0">
+                        <div class="flex items-center gap-4">
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (4 Personas)</span>
+                        </div>
+                    </label>
+
+                    <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
+                        <input type="radio" name="rsvpOption" value="5 personas" class="absolute opacity-0">
+                        <div class="flex items-center gap-4">
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Asistiremos (5 Personas)</span>
                         </div>
                     </label>
 
                     <label class="block relative border border-[var(--blue-pale)] rounded-2xl p-4 cursor-pointer hover:bg-[var(--blue-pale)] transition-colors shadow-sm">
                         <input type="radio" name="rsvpOption" value="Lo siento, no podremos asistir" class="absolute opacity-0">
                         <div class="flex items-center gap-4">
-                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
+                            <div class="w-5 h-5 rounded-full border-2 border-[var(--blue-light)] flex items-center justify-center radio-check text-white transition-colors shrink-0"><i class="fas fa-check text-[9px] opacity-0 transition-opacity"></i></div>
                             <span class="font-sans text-[12px] sm:text-[13px] text-[var(--blue-dark)] font-medium tracking-wide">Lo siento, no podré asistir</span>
                         </div>
                     </label>
                 </div>
 
-                <button onclick="sendRSVP()" class="w-full mt-8 bg-[var(--blue-main)] text-white py-4 rounded-full font-sans text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
+                <button onclick="sendRSVP()" class="w-full mt-6 bg-[var(--blue-main)] text-white py-4 rounded-full font-sans text-[10px] uppercase tracking-widest font-bold hover:bg-[var(--blue-dark)] transition-colors shadow-xl">
                     Enviar WhatsApp
                 </button>
             </div>
@@ -885,7 +929,15 @@
                 alert('Por favor, seleccioná una opción antes de enviar.');
                 return;
             }
-            const mensaje = `¡Hola Isaac y Sol! Confirmo asistencia a la boda. Opción: ${selected.value} 🥂`;
+            
+            let mensaje = '';
+            
+            if (selected.value === 'Lo siento, no podremos asistir') {
+                mensaje = `¡Hola Isaac y Sol! Lamentablemente no podremos asistir a la boda. ¡Les deseamos lo mejor en su gran día! ✨`;
+            } else {
+                mensaje = `¡Hola Isaac y Sol! Confirmo asistencia a la boda para ${selected.value} 🥂`;
+            }
+            
             const waUrl = `https://wa.me/5492604665449?text=${encodeURIComponent(mensaje)}`;
             window.open(waUrl, '_blank');
             closeRSVPModal();
